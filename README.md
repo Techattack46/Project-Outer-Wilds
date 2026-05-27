@@ -9,6 +9,7 @@
 - environment sprites
 - "invasive" objects sprites
 - "invasive" glitch particles
+
 **Game Externals**
   - reflectieverslag (vierdelig)
   - presentatie
