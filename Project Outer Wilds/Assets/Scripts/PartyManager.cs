@@ -8,7 +8,7 @@ public class PartyManager : MonoBehaviour
     
     public Transform player;
     public List<PlayerTrail> partyMembers = new List<PlayerTrail>();
-    public bool recordingEnabled = false;
+    //public bool recordingEnabled = false;
     public List<Vector3> positionHistory = new List<Vector3>();
     public float positionRecordingRange = 0.1f;
     private Vector3 lastRecordedPosition;
@@ -44,6 +44,7 @@ public class PartyManager : MonoBehaviour
         {
             partyMembers.Add(follower);
 
+            /*
             if (partyMembers.Count == 1)
             {
                 recordingEnabled = true;
@@ -52,6 +53,7 @@ public class PartyManager : MonoBehaviour
                 positionHistory.Add(player.position);
                 lastRecordedPosition = player.position;
             }
+            */
 
             follower.StartTrailing();
         }
@@ -59,11 +61,13 @@ public class PartyManager : MonoBehaviour
     
     private void RecordPlayerPosition()
     {
+        /*
         if (!recordingEnabled)
         {
             return;
         }
-        
+        */
+
         if (Vector3.Distance(player.position, lastRecordedPosition) > positionRecordingRange)
         {
             positionHistory.Insert(0, player.position);
