@@ -8,11 +8,10 @@ public class PartyManager : MonoBehaviour
     
     public Transform player;
     public List<PlayerTrail> partyMembers = new List<PlayerTrail>();
-    //public bool recordingEnabled = false;
-    public List<Vector3> positionHistory = new List<Vector3>();
+    private List<Vector3> positionHistory = new List<Vector3>();
     public float positionRecordingRange = 0.1f;
     private Vector3 lastRecordedPosition;
-    public int positionHistoryMaximum = 1000;
+    private int positionHistoryMaximum = 1000;
 
     private void Awake()
     {
@@ -40,34 +39,23 @@ public class PartyManager : MonoBehaviour
 
     public void AddFollower(PlayerTrail follower)
     {
-        if (!partyMembers.Contains(follower))
+        if (partyMembers.Contains(follower))
         {
-            partyMembers.Add(follower);
-
-            /*
-            if (partyMembers.Count == 1)
-            {
-                recordingEnabled = true;
-
-                positionHistory.Clear();
-                positionHistory.Add(player.position);
-                lastRecordedPosition = player.position;
-            }
-            */
-
-            follower.StartTrailing();
+            return;
         }
+
+        partyMembers.Add(follower);
+
+        UpdateSpriteSorting();
+
+        int historyIndex = Mathf.Min(partyMembers.Count * 10, positionHistory.Count - 1);
+
+        follower.SetPositionTarget(positionHistory[historyIndex]);
+        follower.StartTrailing();
     }
     
     private void RecordPlayerPosition()
     {
-        /*
-        if (!recordingEnabled)
-        {
-            return;
-        }
-        */
-
         if (Vector3.Distance(player.position, lastRecordedPosition) > positionRecordingRange)
         {
             positionHistory.Insert(0, player.position);
@@ -85,12 +73,24 @@ public class PartyManager : MonoBehaviour
     {
         for (int i = 0; i < partyMembers.Count; i++)
         {
-            int positionHistoryIndex = (i++) * 10;
+            int positionHistoryIndex = (i + 1) * 10;
 
             if (positionHistory.Count > positionHistoryIndex)
             {
                 partyMembers[i].SetPositionTarget(positionHistory[positionHistoryIndex]);
             }
+        }
+    }
+
+    private void UpdateSpriteSorting()
+    {
+        int highestOrder = partyMembers.Count + 10;
+
+        for (int i = 0; i < partyMembers.Count; i++)
+        {
+            SpriteRenderer renderer = partyMembers[i].GetComponentInChildren<SpriteRenderer>();
+
+            renderer.sortingOrder = highestOrder - (i + 1);
         }
     }
 }

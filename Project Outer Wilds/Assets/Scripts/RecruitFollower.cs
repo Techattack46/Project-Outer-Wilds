@@ -43,8 +43,6 @@ public class RecruitFollower : MonoBehaviour
     {
         recruited = true;
 
-        follower.StartTrailing();
-
         PartyManager.Instance.AddFollower(follower);
 
         Debug.Log(gameObject.name + " joined the Party!");
