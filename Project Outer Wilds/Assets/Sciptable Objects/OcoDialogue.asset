@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42479338bc418114483ba7e647ff56c1, type: 3}
+  m_Name: OcoDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSheet
+  npcName: Sir Oco
+  dialogueLines:
+  - My name is Sir Oco.
+  - 'Yes, that''s right: Sir is my given name.'
+  - I'm not actually nobility.
+  - Would you help me find my birthplace?
+  - Splendid!
+  autoProgressLines: 0101010000
+  dialogueBreak: 0000000101
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  totalDialogueResponses:
+  - dialogueIndex: 3
+    responses:
+    - I would.
+    followUpIndex: 04000000

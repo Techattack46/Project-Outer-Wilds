@@ -5,6 +5,7 @@ public class RecruitFollower : MonoBehaviour
     public bool playerInRange = false;
     public bool recruited = false;
 
+    public NPCDialogue dialogueBehaviour;
     private PlayerTrail follower;
 
     private void Start()
@@ -18,7 +19,7 @@ public class RecruitFollower : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Recruit();
+                dialogueBehaviour.DialogueUponInteraction();
             }
         }
     }
@@ -39,7 +40,7 @@ public class RecruitFollower : MonoBehaviour
         }
     }
 
-    private void Recruit()
+    public void Recruit()
     {
         recruited = true;
 

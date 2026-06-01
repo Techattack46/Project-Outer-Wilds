@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public DialogueManager dialogueManager;
     public float movementSpeed;
 
     private SpriteRenderer spriteRenderer;
@@ -17,7 +18,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        MovementCheck();
+        if (dialogueManager.pauseForDialogue)
+        {
+            return;
+        }
+        else
+        {
+            MovementCheck();
+        }   
     }
 
     private void MovementCheck()
