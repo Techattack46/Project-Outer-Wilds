@@ -168,6 +168,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerTrail
   MovementSpeed: 4
   isTrailing: 0
+  spriteLeft: {fileID: 5143229484629514036, guid: f6bd6e453f70d4e46bf2731e4dc691db, type: 3}
+  spriteRight: {fileID: -6720906458820143918, guid: f6bd6e453f70d4e46bf2731e4dc691db, type: 3}
+  spriteUp: {fileID: 5545200021712370794, guid: f6bd6e453f70d4e46bf2731e4dc691db, type: 3}
+  spriteDown: {fileID: 4518083373202083987, guid: f6bd6e453f70d4e46bf2731e4dc691db, type: 3}
 --- !u!61 &254351229
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -415,6 +419,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   MovementSpeed: 4
   isTrailing: 0
+  spriteLeft: {fileID: -2855072830066243073, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
+  spriteRight: {fileID: 1972975897321587268, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
+  spriteUp: {fileID: -3329408372849862030, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
+  spriteDown: {fileID: -1133624952925587247, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
 --- !u!61 &456666779
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -962,6 +970,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerTrail
   MovementSpeed: 4
   isTrailing: 0
+  spriteLeft: {fileID: -4676648053438071839, guid: 7bac42184e2ca5a42845877b8c444848, type: 3}
+  spriteRight: {fileID: -6037814721861561480, guid: 7bac42184e2ca5a42845877b8c444848, type: 3}
+  spriteUp: {fileID: -4313577508816404300, guid: 7bac42184e2ca5a42845877b8c444848, type: 3}
+  spriteDown: {fileID: 8576802929317704135, guid: 7bac42184e2ca5a42845877b8c444848, type: 3}
 --- !u!61 &1112203592
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1161,6 +1173,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   movementSpeed: 4
+  spriteLeft: {fileID: 3481606505191117047, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
+  spriteRight: {fileID: -6793540789062311968, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
+  spriteUp: {fileID: 4871796155794143181, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
+  spriteDown: {fileID: -7721717156675129513, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
 --- !u!61 &1385263963
 BoxCollider2D:
   m_ObjectHideFlags: 0
