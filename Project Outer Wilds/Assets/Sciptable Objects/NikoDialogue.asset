@@ -28,5 +28,5 @@ MonoBehaviour:
   totalDialogueResponses:
   - dialogueIndex: 3
     responses:
-    - Impress we shall.
+    - Impress them we shall.
     followUpIndex: 04000000

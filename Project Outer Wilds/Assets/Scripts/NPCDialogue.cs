@@ -7,7 +7,8 @@ public class NPCDialogue : MonoBehaviour
     private DialogueManager manager;
 
     private int dialogueIndex;
-    private bool isTyping, dialogueIsActive;
+    private bool isTyping;
+    public bool dialogueIsActive;
     public RecruitFollower recruitBehaviour;
 
     private void Start()

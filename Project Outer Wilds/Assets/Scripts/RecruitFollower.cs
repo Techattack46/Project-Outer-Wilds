@@ -15,7 +15,7 @@ public class RecruitFollower : MonoBehaviour
 
     private void Update()
     {
-        if (playerInRange && !recruited)
+        if (playerInRange && !dialogueBehaviour.dialogueIsActive && !recruited)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
