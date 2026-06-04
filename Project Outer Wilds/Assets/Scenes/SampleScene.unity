@@ -452,6 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   dialogueData: {fileID: 11400000, guid: 2e42bb1da69b6354a87a38ae1bf10ea2, type: 2}
+  dialogueIsActive: 0
   recruitBehaviour: {fileID: 254351230}
 --- !u!1 &389888254
 GameObject:
@@ -643,7 +644,7 @@ MonoBehaviour:
   isTrailing: 0
   spriteLeft: {fileID: -2855072830066243073, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
   spriteRight: {fileID: 1972975897321587268, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
-  spriteUp: {fileID: -3329408372849862030, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
+  spriteUp: {fileID: -2434084959341843947, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
   spriteDown: {fileID: -1133624952925587247, guid: e9abff5e8e48a464497c1441095f16aa, type: 3}
 --- !u!61 &456666779
 BoxCollider2D:
@@ -719,6 +720,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPC
   dialogueData: {fileID: 11400000, guid: 5079d7ed1c98a4c478d0f14f6b60b9c0, type: 2}
+  dialogueIsActive: 0
   recruitBehaviour: {fileID: 456666780}
 --- !u!1 &519420028
 GameObject:
@@ -732,6 +734,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -857,6 +860,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d50378efea85f554bb3197e415474e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraMovement
+  player: {fileID: 1385263961}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,8 +1304,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.3, z: 0}
-  m_LocalScale: {x: 1.14, y: 1.14, z: 0}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2.7, y: 2.7, z: 0}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1337,6 +1353,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fba42c9af2b78443bbe7e00d8e96268, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameEnd
+  recruitMessagePrefab: {fileID: 5465502134658043244, guid: 7344b926ec636394a9bc03722e24bcc4, type: 3}
+  canvasTransform: {fileID: 1272433952}
 --- !u!1 &1112203589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1465,6 +1483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   dialogueData: {fileID: 11400000, guid: 2aa39f1c192fbbd449d6360b893cb1d7, type: 2}
+  dialogueIsActive: 0
   recruitBehaviour: {fileID: 1112203593}
 --- !u!1 &1272433948
 GameObject:
@@ -1706,11 +1725,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712e12e55c707094684ab20b3d98c42e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dialogueManager: {fileID: 1733413702}
   movementSpeed: 4
   spriteLeft: {fileID: 3481606505191117047, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
   spriteRight: {fileID: -6793540789062311968, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
-  spriteUp: {fileID: 4871796155794143181, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
+  spriteUp: {fileID: -7769451223725967852, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
   spriteDown: {fileID: -7721717156675129513, guid: 668adf7fb884e9a4a8ee972630353cdd, type: 3}
 --- !u!61 &1385263963
 BoxCollider2D:
@@ -1814,9 +1832,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 446167601}
   - {fileID: 1733413701}
   - {fileID: 1045450642}
+  - {fileID: 446167601}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1593190021

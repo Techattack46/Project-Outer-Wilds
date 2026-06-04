@@ -46,6 +46,6 @@ public class RecruitFollower : MonoBehaviour
 
         PartyManager.Instance.AddFollower(follower);
 
-        Debug.Log(gameObject.name + " joined the Party!");
+        StartCoroutine(GameManager.Instance.SpawnRecruitMessage(gameObject.name + " joined your party!"));
     }
 }
