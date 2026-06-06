@@ -34,7 +34,6 @@ public class GameManager : MonoBehaviour
     public IEnumerator SpawnRecruitMessage(string message)
     {
         Debug.Log(message);
-        
         GameObject messageBox = Instantiate(recruitMessagePrefab, canvasTransform);
 
         messageBox.GetComponentInChildren<TMP_Text>().text = message;

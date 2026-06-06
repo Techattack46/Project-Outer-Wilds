@@ -20,7 +20,7 @@ public class DialogueSheet : ScriptableObject
 [System.Serializable]
 public class DialogueChoice
 {
-    public int dialogueIndex; //Index of the NPC dialogue line that these are supposed to be responses to.
+    public int dialogueIndex;
     public string[] responses;
-    public int[] followUpIndex; //Index of the NPC dialogue lines that follow the response if chosen.
+    public int[] followUpIndex;
 }

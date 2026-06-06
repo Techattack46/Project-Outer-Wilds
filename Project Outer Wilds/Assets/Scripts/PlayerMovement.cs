@@ -10,6 +10,9 @@ public class PlayerMovement : MonoBehaviour
     public Sprite spriteUp;
     public Sprite spriteDown;
 
+    public float horizontalEdge;
+    public float verticalEdge;
+
     private void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -61,6 +64,22 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        transform.Translate(movement * movementSpeed * Time.deltaTime);
+        transform.Translate(movementSpeed * Time.deltaTime * movement);
+
+        Vector3 playerPosition = transform.position;
+
+        playerPosition.x = Mathf.Clamp(
+            playerPosition.x,
+            -horizontalEdge,
+            horizontalEdge
+        );
+        
+        playerPosition.y = Mathf.Clamp(
+            playerPosition.y,
+            -verticalEdge,
+            verticalEdge
+        );
+
+        transform.position = playerPosition;
     }
 }
