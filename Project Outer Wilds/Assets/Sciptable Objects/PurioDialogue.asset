@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42479338bc418114483ba7e647ff56c1, type: 3}
+  m_Name: PurioDialogue
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueSheet
+  npcName: Purio
+  dialogueLines:
+  - Ach, there goes Sifgard Stalker!
+  - We need that mare for the race.
+  - Darn kids and their fireworks.
+  - Can't have a hippodrome race without the hometown hero.
+  - If you and I keep this under wraps, maybe my boss won't have my hide.
+  - Would you go and fetch that horse for me? I saw him run northward into the woods.
+  - 'Superb. Take some backup with ya, too. '
+  - Any folks in town will do.
+  - There's a reward in it for each of you.
+  autoProgressLines: 010101010100010100
+  dialogueBreak: 000000000001000001
+  autoProgressDelay: 1.5
+  typingSpeed: 0.05
+  voiceSound: {fileID: 0}
+  voicePitch: 1
+  totalDialogueResponses:
+  - dialogueIndex: 5
+    responses:
+    - I'll help you out.
+    followUpIndex: 06000000

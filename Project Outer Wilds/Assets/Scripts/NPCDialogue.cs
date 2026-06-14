@@ -168,6 +168,10 @@ public class NPCDialogue : MonoBehaviour
         manager.ShowDialoguePanel(false);
 
         manager.pauseForDialogue = false;
-        recruitBehaviour.Recruit();
+
+        if (gameObject.CompareTag("Party Member"))
+        {
+            recruitBehaviour.Recruit();
+        }
     }
 }
