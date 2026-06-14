@@ -1359,7 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCDialogue
   dialogueData: {fileID: 11400000, guid: 43dcda9f3512a414096cf877115c6493, type: 2}
   dialogueIsActive: 0
-  recruitBehaviour: {fileID: 0}
+  recruitBehaviour: {fileID: 985734894}
 --- !u!61 &985734893
 BoxCollider2D:
   m_ObjectHideFlags: 0
